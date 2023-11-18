@@ -12,7 +12,7 @@ public class Utility {
 			data();
 		}
 		public void data() {
-			File file = new File("C:\\Explionss\\SmartHospital-ExpLIONS\\src\\test\\resources\\data.properties");
+			File file = new File("src\\test\\resources\\data.properties");
 			FileInputStream fio =null;
 			try {
 				fio = new FileInputStream(file);

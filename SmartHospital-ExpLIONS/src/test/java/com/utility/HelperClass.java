@@ -1,6 +1,7 @@
 package com.utility;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +14,7 @@ private static HelperClass helperclass;
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	public final static int TIMEOUT = 10;
+	
 	
 	public HelperClass(){
 		driver = new EdgeDriver();

@@ -87,6 +87,59 @@ public void user_need_to_click_save_death_record() {
   System.out.println("Succesfully add death record !!");
 }
 
+//Human Resource
+@When("User clicks the HumanResource")
+public void user_clicks_the_human_resource() throws InterruptedException {
+	Thread.sleep(2000);
+	objBDA.ClickHuman();
+   System.out.println("user clicked the Human Resource Successfully");
+}
+
+@When("user clicks the AddStaff")
+public void user_clicks_the_add_staff() throws InterruptedException {
+	Thread.sleep(2000);
+	objBDA.AddStaff();
+  System.out.println("User click the add Staff Button");
+}
+
+@When("user need to fill the required fileds")
+public void user_need_to_fill_the_required_fileds() {
+   
+	objBDA.HumanAction();
+	
+    System.out.println("user completed to proivde details");
+}
+
+@Then("user need to save the information")
+public void user_need_to_save_the_information() {
+	objBDA.HumanSubmit();
+  System.out.println("user save the information Successfully");
+  
+}
+
+@Then("User need to click the Staff Attendance")
+public void user_need_to_click_the_staff_attendance() throws InterruptedException {
+	Thread.sleep(2000);
+	objBDA.Attendance1();
+   System.out.println("User Click the Staff Attendance");
+}
+
+@Then("user need to provide the staff attendance")
+public void user_need_to_provide_the_staff_attendance() {
+	objBDA.ROle();
+	objBDA.staffAttendance();
+	objBDA.staffSearch();
+	
+  System.out.println("user complete the attendance ");
+}
+
+@Then("Save the record")
+public void save_the_record() {
+
+  System.out.println("User Finally Saved the Record");
+}
+
+
 
 	
 	

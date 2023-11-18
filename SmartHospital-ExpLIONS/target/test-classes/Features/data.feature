@@ -16,3 +16,13 @@ Scenario: check the death Functionality
   And user click the Add death record
   And user enters the valid entires
   Then user need to click save death record
+  
+ @HumanResource
+ Scenario: Check the Functionality of Human Resources
+ When User clicks the HumanResource
+ And user clicks the AddStaff
+ And user need to fill the required fileds
+ Then user need to save the information
+ Then User need to click the Staff Attendance
+ And  user need to provide the staff attendance 
+ And Save the record
