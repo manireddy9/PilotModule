@@ -10,14 +10,14 @@ public class BirthAndDeathLocators {
 	public WebElement signin;
 	@FindBy(xpath=" //a[contains(.,'Birth & Death Record')]")
 	public WebElement Clickbirthanddeath;
-	@FindBy(xpath="(//ul[@class='treeview-menu menu-open']//a[1])[1]")
-	public WebElement clickbirth;
+	@FindBy(xpath="(//a[@href='https://demo.smart-hospital.in/admin/birthordeath'])[2]")
+	public WebElement birthrecord;
 	
 	@FindBy(xpath="//i[@class='fa fa-plus']//parent::a[@class='btn btn-primary btn-sm birthrecord']")
 	public WebElement addbirthrecord;
 	
 	//@FindBy(xpath="//div[contains(@class,'box-tools addmeeting')]//a[1]")
-	//public WebElement plus;
+	//public WebElement plus;//this one need to edit
 	
 	@FindBy(xpath="(//input[@class='form-control'])[1]")
 	public WebElement childname;
@@ -42,24 +42,25 @@ public class BirthAndDeathLocators {
 	
 	//Death Locators
 	
-	@FindBy(xpath="//li[@class='active']//a")
+	@FindBy(xpath="//li//a[@href='https://demo.smart-hospital.in/admin/birthordeath/death']")
 	public WebElement deathRecord;
 	@FindBy(xpath="//a[@class='btn btn-primary btn-sm deathrecord']")
 	public WebElement adddeathRecord;
 	@FindBy(xpath="(//input[@id='case_id'])[1]")
-	WebElement DeathCaseId;
+	public WebElement DeathCaseId;
 	@FindBy(xpath="(//input[@name='death_date'])[1]")
 	public WebElement Deathdate;
 	
 	@FindBy(xpath="//input[@id='guardian_name']")
 	public WebElement gurdianname;
-	
+	@FindBy(xpath="//button[@id='formaddbtn']")
+	public WebElement deathsave;
 	
 	//Human Resource Locators
 	
 	@FindBy(xpath="//span[text()='Human Resource']")
 	public WebElement HumanResource;
-	@FindBy(xpath="//a[@class='btn btn-primary btn-sm btnMDb2']//parent::div[@class='btn-group']")
+	@FindBy(xpath="(//a[@class='btn btn-primary btn-sm btnMDb2'])[1] ")
 	public WebElement AddStaff;
 	
 	@FindBy(xpath="//input[@id='employee_id']")
@@ -80,7 +81,7 @@ public class BirthAndDeathLocators {
 	public WebElement fname;
 	@FindBy(id="input#surname")
 	public WebElement lastname;
-	@FindBy(name="gender")
+	@FindBy(xpath="//select[@name='gender']")
 	public WebElement Gender; //dropdown select 
 	@FindBy(id="dob")
 	public WebElement dateofbirth;
@@ -88,6 +89,9 @@ public class BirthAndDeathLocators {
 	public WebElement email;
 	@FindBy(xpath="//button[@class='btn btn-info pull-right']")
 	public WebElement BasicInfoSubmit;
+	
+	@FindBy(xpath="//div[@class='alert alert-success']")
+	public WebElement recordSaved;
 	
 //Staff atendance
 	@FindBy(xpath="(//a[@class='btn btn-primary btn-sm btnMDb2'])[2]")
@@ -105,40 +109,68 @@ public class BirthAndDeathLocators {
 	
 	
 	@FindBy(xpath="//span[text()='Finance']") //parent of income and expenses
-	WebElement Finance;
+	public WebElement Finance;
 	
 	@FindBy(xpath="//a[text()=' Income ']")
-	WebElement Income;
+	public WebElement Income;
 	@FindBy(xpath="//div[@class='box-tools pull-right']//child::a[@class='btn btn-primary btn-sm addincome']")
-	WebElement AddIncome;
+	public WebElement AddIncome;
 	@FindBy(xpath="//select[@id='inc_head_id']") //select 
-	WebElement IncomeHead;
+	public WebElement IncomeHead;
 	@FindBy(xpath="//input[@id='name']")
-	WebElement name;
+	public WebElement name;
 	
 	@FindBy(xpath="//input[@id='date']")
-	WebElement date;
+	public WebElement date;
 	
 	@FindBy(xpath="//input[@id='amount']")
-	WebElement amount;
+	public WebElement amount;
 	@FindBy(xpath="//button[@id='add_incomebtn']")
-	WebElement incomebtn;
+	public WebElement incomebtn;
 	//Expenses
 	@FindBy(xpath="//a[text()=' Expenses']")
-	WebElement Expenses;
+	public WebElement Expenses;
 	@FindBy(xpath="//a[text()='  Add Expense']")
-	WebElement AddExpenses;
+	public WebElement AddExpenses;
 	@FindBy(xpath="//select[@id='exp_head_id']")
-	WebElement ExpensesHead;
+	public WebElement ExpensesHead;
 	@FindBy(xpath="//input[@id='name']")
-	WebElement e_name;
+	public WebElement e_name;
 	@FindBy(xpath="//input[@id='date']")
-	WebElement expensesDate;
+	public WebElement expensesDate;
 	@FindBy(xpath="//input[@id='amount']")
-	WebElement expensesAmount;
+	public WebElement expensesAmount;
 	@FindBy(xpath="//button[@id='addexpensebtn']")
-	WebElement expensesButton;
+	public WebElement expensesButton;
 	
+	
+//	//messaging
+	@FindBy(xpath="//li//a//span[text()='Messaging']")
+    public WebElement Messaging;
+	@FindBy(xpath="//div[@class='box-tools pull-right']//a[text()=' Post New Message']")
+	public WebElement PostMessaging;
+	@FindBy(xpath="//input[@id='title']")
+	public WebElement title;
+	@FindBy(xpath="//iframe[@class='wysihtml5-sandbox']")
+	public WebElement messageIframe;
+	@FindBy(xpath="//body[@class='form-control wysihtml5-editor']")	
+	public WebElement messageBox; //this is message box
+	@FindBy(xpath="//input[@id='date']")
+	public WebElement NoticeDate;
+	@FindBy(xpath="//input[@id='publish_date']")
+	public WebElement PublishON;
+	@FindBy(xpath="(//button[@type='submit'])[3]")
+	public WebElement Send;
+	
+	//logout
+	@FindBy(xpath="//img[@class='topuser-image']")
+	public WebElement Profile;
+	
+	//Assert
+	@FindBy(xpath="//h4[text()='Jason  Abbot']")
+	public WebElement AdminName;
+	@FindBy(xpath="//a[@class='pull-right']")
+	public WebElement Logout;
 	
 	
 			

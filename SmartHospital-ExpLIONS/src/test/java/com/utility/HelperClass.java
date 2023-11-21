@@ -13,11 +13,11 @@ private static HelperClass helperclass;
 	
 	public static WebDriver driver;
 	public static WebDriverWait wait;
-	public final static int TIMEOUT = 10;
+	public final static int TIMEOUT = 25;
 	
 	
 	public HelperClass(){
-		driver = new EdgeDriver();
+		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		driver.manage().window().maximize();
