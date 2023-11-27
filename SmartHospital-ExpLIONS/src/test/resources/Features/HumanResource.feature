@@ -11,3 +11,4 @@ Scenario: Record Staff Attendance
   And user provides the staff attendance
   And user saves the attendance record
   Then the attendance record is successfully saved
+  Then user need to logout

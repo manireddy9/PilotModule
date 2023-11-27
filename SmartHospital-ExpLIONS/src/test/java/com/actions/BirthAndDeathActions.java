@@ -84,7 +84,8 @@ public void SetFather(String Fathername) {
 public void TextArea(String Report) {
 	objl.textarea.sendKeys(Report);
 }
-public void AddRecord() {
+public void AddRecord() throws InterruptedException {
+	Thread.sleep(2000);
 	 wait.until(ExpectedConditions.elementToBeClickable(objl.savebtn)).click();
 	
 }
@@ -131,7 +132,8 @@ public void staffID(String staffid) {
 }
 public void StaffROle() {
 	Select s= new Select(objl.StaffRole);
-	s.selectByIndex(2);
+
+	s.selectByValue("Admin");
 }
 public void StaffFname(String Fname) {
 	wait.until(ExpectedConditions.visibilityOf(objl.fname));
@@ -144,7 +146,7 @@ public void StaffGender() {
 }
 public void DOB(String date) {
 	wait.until(ExpectedConditions.visibilityOf(objl.dateofbirth));
-	objl.dateofbirth.sendKeys(date,Keys.ENTER);
+	objl.dateofbirth.sendKeys(date);
 }
 public void HumanMail(String Mail) {
 	wait.until(ExpectedConditions.visibilityOf(objl.dateofbirth));
@@ -162,11 +164,12 @@ public String RecordSaved() {
 
 // click attendance 
 public void Attendance1() {
+	wait.until(ExpectedConditions.visibilityOf(objl.staffattendance));
 	objl.staffattendance.click();
 }
 public void ROle() {
 	Select r=new Select(objl.Role);
-	r.deselectByIndex(5);
+	r.selectByIndex(5);
 }
 public void staffAttendance() {
 	objl.staffattended.sendKeys("11/22/2023");
